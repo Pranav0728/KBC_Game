@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Pranav Molawade, Vishal Ugalmugale" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KBC</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <img src="./images/clglogo.png" alt="" />
+      </div>
+      <div class="logo">
+        <div class="teamname">
+          <h1 id="groupname">TeamName</h1>
+          <h1 id="time">Time</h1>
+        </div>
+        <img src="./images/logo1.png" alt="" />
+      </div>
+      <div class="container">
+        <div class="timer">30</div>
+        <div class="question" id="question">
+          Questions will be displayed shortly.
+        </div>
+        <div class="options">
+          <div class="option" id="option1">option1</div>
+          <div class="option" id="option2">option2</div>
+          <div class="option" id="option3">option3</div>
+          <div class="option" id="option4">option4</div>
+        </div>
+        <div class="timer-container">
+          <div class="btns">
+            <button class="start-button" onclick="startCountdown()">
+              Start Timer
+            </button>
+            <button
+              class="stop-button"
+              id="stopButton"
+              onclick="stopCountdown()"
+            >
+              Stop Timer
+            </button>
+            <button
+              class="reset-button"
+              id="resetButton"
+              onclick="resettimer()"
+            >
+              Reset Timer
+            </button>
+            <button class="change-button" id="changeButton" onclick="change()">
+              Next Question
+            </button>
+          </div>
+          <audio
+            id="tickSound"
+            src="./audio/Kbc Clock.mp3"
+            preload="auto"
+          ></audio>
+          <audio
+            id="correctsound"
+            src="./audio/correct.mp3"
+            preload="auto"
+          ></audio>
+          <audio id="playsound" src="./audio/play.mp3" preload="auto"></audio>
+          <audio id="wrongsound" src="./audio/wrong.mp3" preload="auto"></audio>
+          <audio id="waitsound" src="./audio/wait.mp3" preload="auto"></audio>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- <script src="dist/bundle.js"></script> -->
+  </body>
+</html>
